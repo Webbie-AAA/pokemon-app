@@ -6,7 +6,8 @@ export default function Home(){
 
         <>
         <div className='homepage-background'>
-            <GeneralCard />
+            <GeneralCard 
+            path='/pick-gender'/>
        
         </div>
             
