@@ -5,11 +5,11 @@ const PokeContext = createContext();
 export const PokeProvider = ({children}) => {
     const [gender, setGender] = useState();
     const [species, setSpecies] = useState();
-    const [specie, setSpecie] = useState()
-    const [variety, setVariety] = useState();
+    const [variant, setVariant] = useState();
+    const [specie, setChosenSpecie] = useState();
 
     return (
-        <PokeContext.Provider value={{gender, setGender, specie, setSpecie, species, setSpecies, variety, setVariety}}>
+        <PokeContext.Provider value={{gender, setGender, species, setSpecies, specie, setChosenSpecie, variant, setVariant}}>
             {children}
         </PokeContext.Provider>
     );

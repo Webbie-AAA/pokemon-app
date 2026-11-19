@@ -24,15 +24,7 @@ export default function PickGender(){
         }
 
         getSpeciesByGender()}, [gender, setSpecies])
-
-
-    
-    
-    
-    
-    
-
-
+        console.log(gender)
     return(
     <>
         <div className='outer'>

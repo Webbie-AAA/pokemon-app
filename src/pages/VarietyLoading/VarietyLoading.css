@@ -1,0 +1,195 @@
+
+/* MAIN PAGE */
+
+.pick-variant-page {
+    width: 90%;
+    max-width: 1400px;
+    min-height: calc(100vh - 180px);
+    margin: 20px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+
+.pick-variant-page h1 {
+    font-size: 3rem !important;
+    color: #00e9ff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* TWO COLUMN LAYOUT */
+
+.pick-variant-page .pick-variant-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 40px;
+    align-items: start;
+    width: 100%;
+}
+
+/* LEFT VARIANT CONTAINER */
+
+.pick-variant-page .todo-container {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    height: 550px;
+    max-height: 550px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 15px;
+    margin: 0;
+    float: none;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+/* VARIANT LIST */
+
+.pick-variant-page .todo-list {
+    width: 100%;
+    min-width: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* INDIVIDUAL VARIANTS */
+
+.pick-variant-page .todo {
+    margin: 0.5rem;
+    background: white;
+    font-size: 1.5rem;
+    color: black;
+    box-shadow: 5px 3px 3px 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+    border-radius: 0.5rem;
+    flex: 1;
+    padding: 0.5rem 0rem;
+    cursor: pointer;
+}
+
+/* ORIGINAL HOVER */
+
+.pick-variant-page .todo:hover {
+    background-color: yellow;
+}
+
+/* ORIGINAL ACTIVE */
+
+.pick-variant-page .todo:active {
+    text-decoration: underline;
+}
+
+/* RIGHT SIDE */
+
+.pick-variant-page .pick-variant-right,
+.pick-variant-page .pick-species-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 35px;
+    width: 100%;
+    min-width: 0;
+}
+
+/* SELECTED VARIANT BOX */
+
+.pick-variant-page .selected-variant {
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+    background-color: aliceblue;
+}
+
+/* NEXT BUTTON - KEEP BOOTSTRAP COLORS */
+
+.pick-variant-page .pick-variant-right .btn,
+.pick-variant-page .pick-species-right .btn {
+    display: block;
+    width: 75% !important;
+    min-height: 75px;
+    margin: 0;
+    float: none;
+    border-radius: 15px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .pick-variant-page {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .pick-variant-page .pick-variant-layout {
+        gap: 25px;
+    }
+
+    .pick-variant-page .selected-variant {
+        font-size: 2rem;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .pick-variant-page {
+        width: 95%;
+        min-height: auto;
+        padding: 15px;
+    }
+
+    .pick-variant-page .pick-variant-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
+    }
+
+    .pick-variant-page .todo-container {
+        height: 300px;
+        max-height: 300px;
+    }
+
+    .pick-variant-page .pick-variant-right,
+    .pick-variant-page .pick-species-right {
+        gap: 25px;
+    }
+
+    .pick-variant-page .selected-variant {
+        height: 200px;
+    }
+}
+
+.pick-variant-page .pick-variant-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 30px;
+}
+
+.pick-variant-page .pick-variant-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.pick-variant-page .selected-variant {
+    height: 300px;
+}
+
+.pick-variant-page .pick-variant-right .btn {
+    width: 75% !important;
+    margin: 0;
+}

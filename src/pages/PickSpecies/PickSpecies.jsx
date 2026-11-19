@@ -1,48 +1,46 @@
+
 import {usePoke} from '../../contexts/index';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
+import './PickSpecies.css'
 
 export default function PickSpecies(){
     const navigate = useNavigate()
-    const {species, setSpecies} = usePoke()
-    console.log(species)
+    const {species, setChosenSpecie, specie} = usePoke()
 
-    function handleSubmit(e){
-        e.preventDefault()
-        const data = new FormData(e.target)
-        const specie = data.get('specie')
-        setSpecies(specie)
-        navigate('/variety-loading')
-
-    }
     
-    return(
-        <>
-            <h1>Pick Your Species 🧌</h1>
-            
-            <ul>
-                {species.map((specie, i) => 
-                    (<li key={i}> {specie.pokemon_species.name }</li>)
-                )}
+return (
+    <div className="pick-species-page">
+        <h1>Select A Species </h1>
 
-            </ul>
-            <br />
-            <Form onSubmit={handleSubmit}>
-                <InputGroup size="lg">
-                    <Form.Label htmlFor="basic-url">Type Your Choice of Species: </Form.Label>
-                    <InputGroup.Text id="inputGroup-sizing-lg">Specie</InputGroup.Text>
-                    <Form.Control
-                    name='specie'
-                    aria-label="Large"
-                    aria-describedby="inputGroup-sizing-sm"
-                    />
-                </InputGroup>
-                <Button className="w-50" variant="primary" size="lg" type='submit'>
-                        Next
+        <div className="pick-species-layout">
+
+            <div className="todo-container">
+                <ul className="todo-list">
+                    {species.map((specie, i) =>
+                        (<li className="todo" key={i} onClick={() => setChosenSpecie(specie.pokemon_species.name)}> {specie.pokemon_species.name} </li>)
+                    )}
+                </ul>
+            </div>
+
+            <div className="pick-species-right">
+                <div className="selected-species">
+                    {specie}
+                </div>
+
+                <Button
+                    className="w-50"
+                    variant="primary"
+                    size="lg"
+                    type="submit"
+                    onClick={() => navigate('/variety-loading')}
+                >
+                    Next
                 </Button>
-            </Form>
-        </>
-    )
+            </div>
+
+        </div>
+    </div>
+)
+
 }
