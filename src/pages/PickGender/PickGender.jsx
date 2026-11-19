@@ -29,6 +29,7 @@ export default function PickGender(){
     <>
         <div className='outer'>
             <div className='App'>
+                <h1>Select A Gender: </h1>
                 <Form.Select  size='lg' value={gender} onChange={e => setGender(e.target.value)}>
                         
                         <option>Select Your Pokemon's Gender: </option>

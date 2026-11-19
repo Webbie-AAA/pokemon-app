@@ -9,6 +9,20 @@ body{
     background-color: #FFCD54 !important;
 }
 
+h1 {
+    font-family: 'Fredoka', sans-serif !important;
+    font-size: clamp(2rem, 4vw, 3.5rem) !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+
+    color: #23395B !important;
+
+    margin: 20px auto 40px;
+    letter-spacing: 2px;
+    line-height: 1.2;
+
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.15);
+}
 
 
 
