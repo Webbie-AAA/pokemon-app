@@ -1,0 +1,67 @@
+
+/* MAIN PAGE */
+.chosen-pokemon-page {
+    width: 100%;
+    min-height: calc(100vh - 150px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* WHITE POKEMON DISPLAY */
+.chosen-pokemon-display {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 550px;
+
+    background-color: #FFCD54;
+    border-radius: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+/* FUTURE POKEMON IMAGE */
+.chosen-pokemon-display img {
+    max-width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+}
+
+img{
+    --scale: 1;
+	--transition-duration: 250ms;
+	scale: var(--scale);
+	transition:
+		scale 
+		var(--transition-duration) 
+		ease-in-out;
+}
+img:hover{
+    max-height: 500px;
+    --scale: 1.1;
+    
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+    .chosen-pokemon-page {
+        min-height: calc(100vh - 100px);
+        padding: 15px;
+    }
+
+    .chosen-pokemon-display {
+        width: 100%;
+        min-height: 400px;
+        padding: 20px;
+    }
+}
